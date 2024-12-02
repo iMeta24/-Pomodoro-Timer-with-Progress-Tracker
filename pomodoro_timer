@@ -1,0 +1,17 @@
+# pomodoro_timer.py
+
+import time
+
+def pomodoro_session(work_time, break_time):
+    print(f"Work for {work_time} minutes.")
+    time.sleep(work_time * 60)
+    print(f"Take a {break_time} minute break.")
+    time.sleep(break_time * 60)
+
+def log_session():
+    with open("pomodoro_log.txt", "a") as file:
+        file.write("Pomodoro session completed.\n")
+
+# Sample usage
+pomodoro_session(25, 5)
+log_session()
